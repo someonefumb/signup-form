@@ -2,6 +2,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -10,7 +12,7 @@ body {
 
 .picture {
     width: 40vw;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(./neil-mark-thomas-meScUd3NbKk-unsplash.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -23,6 +25,11 @@ body {
 
 .logo {
     margin-bottom: calc(0.65 * 100vh);
+    font-size: 3rem;
+}
+
+.logo::before {
+    
 }
 
 .picture-credit {
@@ -31,4 +38,83 @@ body {
 
 .form {
     width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    border: 10px black ridge;
+    border-right: 10px black groove;
+    border-bottom: 10px black groove;
+    background: linear-gradient(#b6d3df, #ebf8e1, #0f0f0f);
+}
+
+.form-header, 
+.signUp, 
+.form-footer {
+    padding-left: calc(0.1 * 60vw);
+    padding-right: calc(0.1 * 60vw);
+}
+
+.form-header>p,
+.form-header>p>em {
+    font-size: 2rem;
+}
+
+.filler-text {
+    padding-top: 20px;
+}
+
+.signUp {
+    background: #b3b3b3da;
+    border-top: 10px black groove;
+    border-bottom: 10px black groove;
+    padding-top: 20px;
+    height: 325px;
+}
+
+h1 {
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+form>.form-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15%;
+    column-gap: 5%;
+}
+
+form>.form-content>div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.1rem;
+}
+
+input {
+    font-size: 1.3rem;
+    width: 80%;
+    height: 25px;
+    border-radius: 3px;
+    border: 2px black solid;
+}
+
+input:invalid {
+    border: 2px red solid;
+}
+
+.form-footer {
+    margin-top: 35px;
+}
+
+button {
+    height: 45px;
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+    background-color: #a0f1dd;
+    margin-top: calc(0.4 * 325px);
+    font-size: 1.4rem;
 }
