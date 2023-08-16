@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="picture">
-        <div class="logo">LOGO</div>
+        <div class="logo">
+            <img src="logo.png" alt="">
+            <p>Oranges</p>
+        </div>
         <div class="picture-credit">Photo by link <a href="https://unsplash.com/@neilthomas">Neil Thomas</a> on <a href="https://unsplash.com/">Unsplash</a></div>
     </div>
 
@@ -24,28 +27,34 @@
             <form>
                 <div class="form-content">
                     <div>
-                        <label for="user_firstName">FIRST NAME</label>
-                        <input type="text" id="user_firstName" name="firstName">
+                        <label for="user_firstName">FIRST NAME *</label>
+                        <input type="text" id="user_firstName" name="firstName" required placeholder="James" pattern="^[A-Za-z]+$" oninvalid="setCustomValidity('Please enter letters. ')">
+                        <span></span>
                     </div>
                     <div>
-                        <label for="user_lastName">LAST NAME</label>
-                        <input type="text" id="user_lastName" name="lastName">
+                        <label for="user_lastName">LAST NAME *</label>
+                        <input type="text" id="user_lastName" name="lastName" required placeholder="Smith" pattern="^[A-Za-z]+$" oninvalid="setCustomValidity('Please enter letters. ')">
+                        <span></span>
                     </div>
                     <div>
-                        <label for="user_email">EMAIL</label>
-                        <input type="email" id="user_email" name="email">
+                        <label for="user_email">EMAIL *</label>
+                        <input type="email" id="user_email" name="email" required placeholder="JamesSmith@gmail.com" oninvalid="setCustomValidity('Please enter an email. ')">
+                        <span></span>
                     </div>
                     <div>
                         <label for="user_phone">PHONE NUMBER</label>
-                        <input type="tel" id="user_phone" name="phone">
+                        <input type="tel" id="user_phone" name="phone" placeholder="1234567890" minlength="9" maxlength="9" pattern="[0-9]+" oninvalid="setCustomValidity('Please enter a phone number. ')">
+                        <span></span>
                     </div>
                     <div>
-                        <label for="user_password">PASSWORD</label>
-                        <input type="password" id="user_password" name="password">
+                        <label for="user_password">PASSWORD *</label>
+                        <input type="password" id="user_password" name="password" required placeholder=" ">
+                        <span></span>
                     </div>
                     <div>
-                        <label for="user_password_confirm">CONFIRM PASSWORD</label>
-                        <input type="password" id="user_password_confirm" name="passwordConfirm">
+                        <label for="user_password_confirm">CONFIRM PASSWORD *</label>
+                        <input type="password" id="user_password_confirm" name="passwordConfirm" required placeholder=" ">
+                        <span></span>
                     </div>
                 </div>
                 <button type="submit">Create Account</button>
@@ -53,7 +62,7 @@
         </div>
         
         <div class="form-footer">
-            <div>Already have an account?</div>
+            Already have an account? <a href="#">Log in</a>
         </div>
     </div>
 </body>
